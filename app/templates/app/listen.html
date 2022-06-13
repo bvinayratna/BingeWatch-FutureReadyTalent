@@ -1,0 +1,26 @@
+{% extends 'app/home.html' %}
+{% load static %}
+{% block content1 %}
+    <link type="text/css" rel="stylesheet" href="{% static 'app/listen.css' %}">
+
+    <form method="POST">
+        {% csrf_token %}
+        <input name="search"
+               class="search_bar"
+               type="text"
+               placeholder="Search song...">
+        &ensp;
+        <button name="song_search" value="search" type="submit" class="search_btn">Search</button>
+    </form>
+</input>
+<div class="listenbody">
+    {% for track in tracks %}
+        <div class="song_body">
+            <iframe style="border-radius:7px" src="https://open.spotify.com/embed/track/{{track.track_id}}?utm_source=generator&theme=0" 
+            width="290px" height="250px" frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe><br/>
+        </div>
+    {% endfor %}
+    <div>
+    {% endblock content1 %}

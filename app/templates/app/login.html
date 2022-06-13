@@ -1,0 +1,25 @@
+{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static  "/app/login.css" %}">
+<center>
+<div class="main">
+  <form method="POST">
+    {% csrf_token %}
+  <center>
+    <h1>Login page</h1><br/><br/>
+    <input class="input_field" type="text" name="username" placeholder="Username"></input>
+    <br />
+    <br />
+    <input class="input_field" type="password" name="password" placeholder="Password"></input>
+    <br />
+    <br />
+    <input class="input_field_submit" type="submit"></input>
+   </center>
+  </form>
+
+</div>
+</center>
+
+      
+{% endblock %}
