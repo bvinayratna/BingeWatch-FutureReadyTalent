@@ -84,7 +84,7 @@ DATABASES = {
 
         'USER': 'postgres',
 
-        'PASSWORD': 'vinAy@2003',
+        'PASSWORD': 'v***3',
 
         'HOST': 'bingewatch.postgres.database.azure.com',
 
